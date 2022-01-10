@@ -13,6 +13,7 @@ def changeToNegative(image):
             r,g,b = image.getpixel((x, y))
             image.putpixel((x, y), (255-r,255-g,255-b))
     image.show()
+    image.save("NegativeApple.jpeg", "jpeg")
 
 def makeItGray(image):
     for y in range(height):
@@ -35,4 +36,5 @@ def halfNegativeHalfGray(image):
                 image.putpixel((x, y), (grayColor, grayColor, grayColor))
     image.show()
 
-halfNegativeHalfGray(img)
+
+changeToNegative(img)
