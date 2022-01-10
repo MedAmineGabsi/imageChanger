@@ -13,7 +13,6 @@ def changeToNegative(image):
             r,g,b = image.getpixel((x, y))
             image.putpixel((x, y), (255-r,255-g,255-b))
     image.show()
-    image.save("NegativeApple.jpeg", "jpeg")
 
 def makeItGray(image):
     for y in range(height):
@@ -36,5 +35,16 @@ def halfNegativeHalfGray(image):
                 image.putpixel((x, y), (grayColor, grayColor, grayColor))
     image.show()
 
+def canalChange(image):
+    for y in range(height):
+        for x in range(width):
+            r,g,b = image.getpixel((x, y))
+            image.putpixel((x, y), (g, b, r))
+    image.show()
 
-changeToNegative(img)
+def keepGreen(image):
+    for y in range(height):
+        for x in range(width):
+            r,g,b = image.getpixel((x, y))
+            image.putpixel((x, y), (b, g, r))
+    image.show()
