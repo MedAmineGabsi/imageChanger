@@ -48,3 +48,13 @@ def keepGreen(image):
             r,g,b = image.getpixel((x, y))
             image.putpixel((x, y), (b, g, r))
     image.show()
+
+def bluePixelOntheLeft(image):
+    image.putpixel((100, 250), (0, 0, 255))
+    image.show()
+
+def redPixelOntheCenter(image):
+    image.putpixel((250, 250), (255, 0, 0))
+    image.show()
+    image.save("GreenAppleWithRedPixel.jpeg", "jpeg")
+
